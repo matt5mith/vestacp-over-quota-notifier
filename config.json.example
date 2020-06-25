@@ -1,0 +1,12 @@
+{
+    "quota_warning_percentage": 90,
+    "new_line": "\n",
+    "smtp_host": "localhost",
+    "smtp_port": 25,
+    "smtp_username": "",
+    "smtp_password": "",
+    "local_hostname": "",
+    "sender": "me@domain.com",
+    "recipient": "you@domain.com",
+    "unlimited_quota": 99999
+}
