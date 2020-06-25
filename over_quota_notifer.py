@@ -37,7 +37,7 @@ def send_email_report(report):
     server.sendmail(CONFIG['sender'], CONFIG['recipient'], message)
     server.quit()
 
-f = open("config.json", "r")
+f = open(os.path.dirname(os.path.realpath(__file__)) + "/config.json", "r")
 CONFIG = json.loads(f.read())
 
 report = ''
