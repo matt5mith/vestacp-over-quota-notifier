@@ -9,16 +9,16 @@ def json_from_shell_command(cmd):
     return json.loads(response)
 
 def get_users():
-    return json_from_shell_command('v-list-sys-users')
+    return json_from_shell_command('/usr/local/vesta/bin/v-list-sys-users')
 
 def get_domains(user):
-    return json_from_shell_command('v-list-mail-domains ' + user)
+    return json_from_shell_command('/usr/local/vesta/bin/v-list-mail-domains ' + user)
 
 def get_mail_accounts(user, domain):
-    return json_from_shell_command('v-list-mail-accounts ' + user + ' ' + domain)
+    return json_from_shell_command('/usr/local/vesta/bin/v-list-mail-accounts ' + user + ' ' + domain)
 
 def get_mail_account_info(user, domain, account):
-    account_info = json_from_shell_command('v-list-mail-account ' + user + ' ' + domain + ' ' +  mail_account)[mail_account]
+    account_info = json_from_shell_command('/usr/local/vesta/bin/v-list-mail-account ' + user + ' ' + domain + ' ' +  mail_account)[mail_account]
     if account_info['QUOTA'] == "unlimited":
         account_info['QUOTA'] = CONFIG['unlimited_quota']
     account_info['U_DISK'] = int(account_info['U_DISK'])
