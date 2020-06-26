@@ -1,4 +1,4 @@
-# Over Quota Notifier
+# VestaCP Over Quota Notifier
 This script is designed to work with VestaCP and send out email alerts when mail accounts are appoaching or exceeding their quota.
 
 ## Requirements
