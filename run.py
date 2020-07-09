@@ -56,6 +56,5 @@ for user in get_users():
                 report = report + mail_account_info['ADDRESS'] + ' is over ' + str(CONFIG['quota_warning_percentage']) + '% warning level' + usage_string + CONFIG['new_line']
 
 if report != '':
-    print(report)
     send_email_report(report)
     
